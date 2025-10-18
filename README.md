@@ -1,15 +1,18 @@
 # CodeAlpha_NIDS
 A minimal, Windows-first Network Intrusion Detection System (NIDS) using Snort 2.x and Npcap. This repo helps you install, configure, run, test, and troubleshoot Snort on Windows with a clean config and a few sample rules.
+
 **FEATURES**
 Minimal snort.conf tailored for Windows
 Clean local.rules with safe starter rules
 One-liner run script for validation and live monitoring
 Step-by-step test instructions (e.g., detect pings)
 Practical troubleshooting for common Windows errors
+
 **REQUIREMENTS**
 Windows 10/11 (Admin privileges)
 Npcap (install in WinPcap-compatible mode)
 Snort 2.x for Windows
+
 **REPOSITORY LAYOUT**
 .
 ├── configs/
@@ -19,6 +22,7 @@ Snort 2.x for Windows
 ├── scripts/
 │   └── run_snort.bat         # Validate + run Snort
 └── README.md
+
 **QUICK START**
 Install Npcap
 Choose: “Install Npcap in WinPcap API-compatible mode.”
@@ -39,6 +43,7 @@ Generate test traffic: ping 8.8.8.8
 See alerts
 In the Snort console (live)
 In C:\Snort\log\alert.fast
+
 **CONFIGURATION**
 configs/snort.conf (Windows-first)
 Uses Windows paths only (no Linux /usr/local/...)
@@ -48,7 +53,8 @@ Only includes your local rules by default
 Writes logs to C:\Snort\log (text alerts with -K ascii)
 rules/local.rules
 Starter rules, including an ICMP (ping) alert to verify everything works.
-TROUBLESHOOTING
+
+**TROUBLESHOOTING**
 
 | Error / Symptom                               | Likely Cause                      | Fix                                                                                                                                                  |
 | --------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
